@@ -1,0 +1,2 @@
+print("\n=*=*=*=*=*=*=*=*=*=*=Crea tu el nombre de tu marca personal 😎🙏 =*=*=*=*=*=*=*=*=*=*=")
+print("\nTu marca personal es:\n\t \"" + input("¿Como se llama tu mascota? \n") + input("¿Como se llama tu comida favorita? \n") + "\"")

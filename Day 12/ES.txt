@@ -1,0 +1,29 @@
+Datos:	N# - 9536		31/7/2024 - 18:46
+***********************************************
+Items		Cant.	Costo Items
+------------------------------------------------------
+Pizza		1	$ 10.0
+Hamburguesa		1	$ 8.0
+Ensalada		1	$ 7.0
+Agua		1	$ 1.0
+Café		1	$ 2.0
+Té		1	$ 1.5
+Helado		1	$ 4.0
+Pastel de chocolate		1	$ 5.0
+Tarta de manzana		1	$ 4.5
+Mousse de chocolate		1	$ 5.5
+Flan		1	$ 4.0
+Macarons		1	$ 6.5
+Crema catalana		1	$ 5.0
+Panna cotta		1	$ 4.5
+------------------------------------------------------
+Costo de la comida: 			$ 25.0
+Costo de las bebidas: 			$ 4.5
+Costo de los postres: 			$ 39.0
+------------------------------------------------------
+Subtotal: 			$ 68.5
+Impuestos: 			$ 4.8
+	Total: 	$ 63.7
+Lo esperamos pronto
+------------------------------------------------------
+

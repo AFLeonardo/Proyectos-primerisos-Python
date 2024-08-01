@@ -1,0 +1,26 @@
+num1 = 78
+num2 = 30.5
+
+num1 = num1 + num2
+
+num3 = 5.8
+print(num3)
+print(type(num3))
+
+num4 = int(num3)
+print(type(num4))
+
+""""
+Práctica Formatear Cadenas 2
+
+Muestra al usuario la cantidad de puntos acumulados dentro de la siguiente frase:
+
+Has ganado (puntos_nuevos) puntos! En total, acumulas (puntos_totales) puntos
+
+Recuerda que la precisión de tu respuesta (espacios, ortografía y puntuación), es muy importante 
+para llegar al resultado correcto.
+"""
+puntos_nuevos = 350
+puntos_totales = 1225
+
+print(f"Has ganado {puntos_nuevos} puntos! En total, acumulas {puntos_totales} puntos")
