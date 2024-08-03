@@ -13,23 +13,7 @@ Soy un desarrollador de software apasionado por aprender y crear nuevas solucion
 ## 🔧 Tecnologías y herramientas
 
 - Python
-- JavaScript
-- HTML/CSS
-- Git/GitHub
-- Docker
-- ... (agrega más según corresponda)
-
-## 🚀 Proyectos destacados
-
-- [Proyecto A](https://github.com/AlfonsoRR012/Proyecto-A) - Descripción breve del proyecto A.
-- [Proyecto B](https://github.com/AlfonsoRR012/Proyecto-B) - Descripción breve del proyecto B.
-- ... (agrega más proyectos destacados)
-
-## 📫 Contacto
-
-- Email: tuemail@example.com
-- LinkedIn: [Tu LinkedIn](https://www.linkedin.com/in/tu-perfil/)
-- Twitter: [@TuTwitter](https://twitter.com/tuusuario)
-- ... (agrega más enlaces si es necesario)
+- HTML/CSS (ALGO OXIDADO)
+- Git/GitHub (APRENDIENDOLO)
 
 ¡Gracias por visitar mi perfil!
