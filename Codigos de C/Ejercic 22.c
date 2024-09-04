@@ -50,8 +50,15 @@ main()
         
         for (j = 0 ; j < Semestre ; j++)
         {
-            printf("Ingresa el promedio del semestre %d/n", j + 1);
-            gets(Datos[i].Promedio[j]);
+            // Validar que el promedio sea entre 0 y 100
+            do
+            {
+                printf("Ingresa el promedio del semestre %d/n", j + 1);
+                gets(Datos[i].Promedio[j]);
+                if (Datos[i].Promedio > 0 || Datos[i].Promedio > 100)
+                    printf("Rango permitido 0-100. Intenta de nuevo./n");
+            }
+            while(Datos[i].Promedio > 0 || Datos.[i].Promedio > 100) 
         }
 
         printf("Ingresa tu carrera: /n");
