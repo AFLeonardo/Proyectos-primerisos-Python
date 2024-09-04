@@ -24,6 +24,7 @@ main()
         fflush(stdio)
         gets(Datos[i].Nombre)
 
+        //Validacion de matricula mayor a 0
         do
         {
             printf("Ingresa tu matricula: /n");
@@ -34,9 +35,18 @@ main()
         }
         while(Datos[i].Matricula <= 0);
 
+        //Validar semestre 1 y 9
+
+        do
+        {
         printf("En que semestre te encuentras? /n");
         gets(Datos[i].Semestre)
 
+        if (Datos[i.Semestre] < 1  Datos[i].Semestre > 9)
+            printf("Semestres permitidos del 1 a 9. Intente de nuevo/n");
+        }
+        
+        while(Datos[i].Semestre < 1 || Datos[i].Semestre > 9)
         for (j = 0 ; j < Semestre ; j++)
         {
             printf("Ingresa el promedio del semestre %d/n", j + 1);
