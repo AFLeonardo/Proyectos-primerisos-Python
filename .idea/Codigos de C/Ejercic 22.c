@@ -11,7 +11,7 @@ struct Estudiante{
 main()
 {
     char agregar;
-    int i = 0;
+    int i = 0, j;
     Estudiante Datos[20]; //Maximo 20 estudiantes
 
     printf("Quieres agregar datos?: ");
@@ -24,8 +24,15 @@ main()
         fflush(stdio)
         gets(Datos[i].Nombre)
 
-        printf("Ingresa tu matricula: /n");
-        gets(Datos[i].Matricula);
+        do
+        {
+            printf("Ingresa tu matricula: /n");
+            gets(Datos[i].Matricula);
+
+            if (Datos[i].Matricula <= 0);
+                printf("La matricula no puedo ser menor a 0. Intenta de nuevo./n");
+        }
+        while(Datos[i].Matricula <= 0);
 
         printf("En que semestre te encuentras? /n");
         gets(Datos[i].Semestre)
@@ -37,6 +44,7 @@ main()
         }
 
         printf("Ingresa tu carrera: /n");
-        gets()
+        gets(Datos[i].Carrera);
+
     }
 }
