@@ -16,7 +16,7 @@ int main()
 
     printf("¿Quieres agregar datos? (s/n): ");
     fflush(stdin);
-    scanf("%c", &agregar);
+    gets(agregar);
 
     while(agregar == 's' && i < 20)
     {
@@ -28,7 +28,7 @@ int main()
         do
         {
             printf("Ingresa tu matrícula:\n");
-            gets(Datos[i].Matricula);
+            scanf("%d", &Datos[i].Matricula);
 
             if (Datos[i].Matricula <= 0)
                 printf("La matrícula no puede ser menor o igual a 0. Intenta de nuevo.\n");
@@ -39,7 +39,7 @@ int main()
         do
         {
             printf("¿En qué semestre te encuentras?\n");
-            gets(Datos[i].Semestre);
+            scanf("%d", &Datos[i].Semestre);
 
             if (Datos[i].Semestre < 1 || Datos[i].Semestre > 9)
                 printf("Semestres permitidos del 1 al 9. Intente de nuevo.\n");
@@ -52,24 +52,17 @@ int main()
             do
             {
                 printf("Ingresa el promedio del semestre %d:\n", j + 1);
-                gets(Datos[i].Promedio[j]);
+                scanf("%d", &Datos[i].Promedio[j]);
 
-                if (Datos[i].Promedio[j] < 0 || Datos[i].Promedio[j] > 100)
+                if (Datos​[i].Promedio[j] < 0 || Datos.[i].Promedio[j])
                     printf("Rango permitido 0-100. Intenta de nuevo.\n");
             }
-            while(Datos[i].Promedio[j] < 0 || Datos[i].Promedio[j] > 100);
+            while(Datos[i].Promedio[j] < 0 || Datos.[i].Promedio[j])
         }
 
-        printf("Ingresa tu carrera:\n");
-        fflush(stdin);
-        gets(Datos[i].Carrera;
-
-        i++;
-        if (i < 20)
-        {
-            printf("¿Quieres agregar otro estudiante? (s/n): ");
-            fflush(stdin);
-            gets(agregar);
-        }
+        printf("Ingresa tu carrera: \n");
+        gets(Datos[i].Carrera);
     }
+
+    printf("Nombre: %c",Datos[0].Nombre, "Matricula: %d", Datos[0].Matricula, "Semestre: %d", Datos[0].Semestre);
 }
