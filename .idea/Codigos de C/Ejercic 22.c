@@ -45,8 +45,9 @@ main()
         if (Datos[i.Semestre] < 1  Datos[i].Semestre > 9)
             printf("Semestres permitidos del 1 a 9. Intente de nuevo/n");
         }
-        
+
         while(Datos[i].Semestre < 1 || Datos[i].Semestre > 9)
+        
         for (j = 0 ; j < Semestre ; j++)
         {
             printf("Ingresa el promedio del semestre %d/n", j + 1);
