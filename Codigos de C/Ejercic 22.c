@@ -8,11 +8,25 @@ struct Estudiante{
     char Carrera[30];
 };
 
+struct Alumnos_destacados{
+    struct Estudiante Datos;
+}
+
+struct Alumnos_computacion_destacados{
+    struct Estudiante Datos;
+}
+
+
 int main()
 {
     char agregar;
-    int i = 0, j;
+    int i = 0, j, alumnos = 0;
     struct Estudiante Datos[20]; // Máximo 20 estudiantes
+    struct Alumnos_destacados Datos_destacados[20];
+    struct Alumnos_computacion_destacados Datos_destacados_computacion[20];
+    float Alumnos_promedio_general[10][10];
+    char Carrera[30];
+
 
     printf("¿Quieres agregar datos? (s/n): ");
     fflush(stdin);
@@ -64,5 +78,33 @@ int main()
         gets(Datos[i].Carrera);
     }
 
+    // Prueba
     printf("Nombre: %c",Datos[0].Nombre, "Matricula: %d", Datos[0].Matricula, "Semestre: %d", Datos[0].Semestre);
+
+    // Proceso de alumnos con promedio mayor o igual a 90
+    for (i =0 ; i < alumnos ; i++)
+    {
+        // Inciso a)
+        if(Datos[i].Promedio >= 90)
+        {
+            Datos_destacados[i].Nombre = Datos[i].Nombre;
+            Datos_destacados[i].Matricula = Datos_destacados[i].Matricula;
+        }
+
+        // Inciso b)
+        if(Datos[i].Promedio >= 90 && Datos[i].Carrera == "Computacion")
+        {
+            Datos_destacados_computacion[i].Nombre = Datos[i].Nombre;
+            Datos_destacados_computacion[i].Matricula = Datos[i].Matricula;
+        }
+
+        // Inciso c)
+        if(Datos[i].Promedio )
+    }
+
+    //Preguntar al usuario la carrera que desea filtrar
+    printf("Cual es la carrera por la ue quieres filtrar: \n");
+    gets(Carrera);
+
+
 }
