@@ -4,7 +4,7 @@ struct Estudiante{
     char Nombre[30];
     int Matricula;
     int Semestre;
-    int Promedio[10]; // Máximo 10 semestres
+    int Promedio[9]; // Máximo 9 semestres
     char Carrera[30];
 };
 
@@ -22,13 +22,13 @@ int main()
     {
         printf("Ingresa tu nombre:\n");
         fflush(stdin);
-        fgets(Datos[i].Nombre, 30, stdin);
+        gets(Datos[i].Nombre);
 
         // Validación de matrícula mayor a 0
         do
         {
             printf("Ingresa tu matrícula:\n");
-            scanf("%d", &Datos[i].Matricula);
+            gets(Datos[i].Matricula);
 
             if (Datos[i].Matricula <= 0)
                 printf("La matrícula no puede ser menor o igual a 0. Intenta de nuevo.\n");
@@ -39,7 +39,7 @@ int main()
         do
         {
             printf("¿En qué semestre te encuentras?\n");
-            scanf("%d", &Datos[i].Semestre);
+            gets(Datos[i].Semestre);
 
             if (Datos[i].Semestre < 1 || Datos[i].Semestre > 9)
                 printf("Semestres permitidos del 1 al 9. Intente de nuevo.\n");
@@ -52,7 +52,7 @@ int main()
             do
             {
                 printf("Ingresa el promedio del semestre %d:\n", j + 1);
-                scanf("%d", &Datos[i].Promedio[j]);
+                gets(Datos[i].Promedio[j]);
 
                 if (Datos[i].Promedio[j] < 0 || Datos[i].Promedio[j] > 100)
                     printf("Rango permitido 0-100. Intenta de nuevo.\n");
@@ -62,16 +62,14 @@ int main()
 
         printf("Ingresa tu carrera:\n");
         fflush(stdin);
-        fgets(Datos[i].Carrera, 30, stdin);
+        gets(Datos[i].Carrera;
 
         i++;
         if (i < 20)
         {
             printf("¿Quieres agregar otro estudiante? (s/n): ");
             fflush(stdin);
-            scanf("%c", &agregar);
+            gets(agregar);
         }
     }
-
-    return 0;
 }
