@@ -6,14 +6,3 @@ Tal vez algunos o todos pueden ser no esten de la mejora manera hecha pero hice 
 Seguimos trabajando....
 
 
-# Hola, soy Leonardo 👋
-
-Soy un desarrollador de software apasionado por aprender y crear nuevas soluciones. Actualmente, estoy enfocado en mejorar mis habilidades en Python y trabajar en proyectos interesantes.
-
-## 🔧 Tecnologías y herramientas
-
-- Python
-- HTML/CSS (ALGO OXIDADO)
-- Git/GitHub (APRENDIENDOLO)
-
-¡Gracias por visitar mi perfil!
