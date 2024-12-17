@@ -1,8 +1,19 @@
-<h1>Información</h1>
-<a href="{% url 'tareas'%}">Volver</a>
-<form method="POST", action="">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Enviar">
+{% extends 'base/principal.html' %}
+{% block content %}
+<div class="titulo_barra barra-superior">
+    <a href="{% url 'tareas'%}">&#8678; Volver</a>
+</div>
 
-</form>
+<div class="cuerpo-tarjeta">
+    <form method="POST", action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="boton" type="submit" value="Enviar">
+    
+    </form>
+
+</div>
+
+
+
+{% endblock content %}

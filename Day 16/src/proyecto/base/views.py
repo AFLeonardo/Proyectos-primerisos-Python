@@ -43,6 +43,12 @@ class ListaPendientes(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['tareas'] = context['tareas'].filter(usuario=self.request.user)
         context['count'] = context['tareas'].filter(completo=False).count()
+
+        valor_buscado = self.request.GET.get('area-buscar') or ''
+        if valor_buscado:
+                context['tareas'] = context['tareas'].filter(titulo__icontains=valor_buscado)
+
+        context['valor_buscado'] =  valor_buscado
         return context
 
 class DetalleTarea(LoginRequiredMixin, DetailView):
@@ -56,7 +62,7 @@ class CrearTarea(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('tareas')
     template_name = 'base/agregar_tarea.html'
 
-    def form_invalid(self, form):
+    def form_valid(self, form):
         form.instance.usuario = self.request.user
         return super(CrearTarea, self).form_valid(form)
 

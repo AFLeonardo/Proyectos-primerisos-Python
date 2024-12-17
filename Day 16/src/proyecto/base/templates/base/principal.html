@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de pendientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+    <style>
+        body {
+            background-color: #F4DBD8;
+            font-family: 'Ubuntu';
+            padding-top: 60px;
+        }
+
+        .container{
+            max-width: 650px;
+            margin: auto;
+            background-color: #C09891;
+            -webkit-box-shadow: 18px 25px 21px -7px rgba(0,0,0,0.57);
+            -moz-box-shadow: 18px 25px 21px -7px rgba(0,0,0,0.57);
+            box-shadow: 18px 25px 21px -7px rgba(0,0,0,0.57);
+
+            border-radius: 20px 20px 20px 20px;
+            -moz-border-radius: 20px 20px 20px 20px;
+            -webkit-border-radius: 20px 20px 20px 20px;
+            border: 0px dotted #000000;
+        }
+
+        h1, h2, h3, h4 , h5, h6{
+            font-family: 'Bebas Neue';
+        }
+
+        a, p {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #000000;
+            transition: .2s;
+        }
+
+        .barra-superior {
+            display: flex;
+            justify-content: space-between;
+            color: #FFF !important;
+            padding: 10px;
+            background: linear-gradient(90deg, #2A0800 0%, #2A0800 40%, #775144 100%);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .barra-superior form button {
+            color: #F7DD72;
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 7px;
+            border: 1px solid #BEA8A7;
+            font-family: 'Ubuntu';
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: transparent;
+            overflow: hidden;
+            box-shadow: 0 0 0 0 transparent;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
+
+        .barra-superior form button:hover {
+            background: #775144;
+            box-shadow: 0 0 30px 5px #BEA8A7;
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+        }
+
+        .barra-superior form button:hover::before {
+            -webkit-animation: sh02 0.5s 0s linear;
+            -moz-animation: sh02 0.5s 0s linear;
+            animation: sh02 0.5s 0s linear;
+        }
+
+        .barra-superior form button::before {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 86%;
+            position: absolute;
+            top: 7%;
+            left: 0%;
+            opacity: 0;
+            background: #fff;
+            box-shadow: 0 0 50px 30px #fff;
+            -webkit-transform: skewX(-20deg);
+            -moz-transform: skewX(-20deg);
+            transform: skewX(-20deg);
+        }
+
+        @keyframes sh02 {
+            from {
+                opacity: 0;
+                left: 0%;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+                left: 100%;
+            }
+        }
+        
+        
+
+        .barra-superior form button:active {
+            box-shadow: 0 0 0 0 transparent;
+            -webkit-transition: box-shadow 0.2s ease-in;
+            -moz-transition: box-shadow 0.2s ease-in;
+            transition: box-shadow 0.2s ease-in;
+        }
+
+        .envoltorio-tareas {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #5AB1BB;
+            border-top: 1px solid #775144;
+        }
+
+        .titulo-tarea {
+            display: flex;
+        }
+
+        .titulo-tarea {
+            display: flex; /* Alinea los elementos en fila */
+            align-items: center; /* Centra verticalmente */
+            justify-content: space-between; /* Separa los elementos */
+            gap: 10px; /* Espaciado entre los elementos */
+            padding: 10px; /* Espaciado interno */
+            font-family: 'Poppins';
+        }
+
+        .enlace-eliminar {
+            color: red; /* Personalización del color */
+            text-decoration: none; /* Elimina subrayado */
+            font-size: 1.2rem; /* Ajusta el tamaño */
+        }
+
+        .icono-tarea-completa, .icono-tarea-incompleta {
+            width: 20px;
+            height: 20px;
+            background-color: lightgreen; /* Ajusta según tu estilo */
+            border-radius: 50%; /* Ícono circular */
+            margin-right: 10px;
+        }
+
+        .icono-tarea-incompleta {
+            background-color: lightcoral;
+        }
+
+        #envoltorio-agregar-buscar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #F7DD72;
+        }
+
+        #enlace-agregar {
+            color: #EA4220;
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px #814138;
+        } 
+
+        input[type=text],
+        input[type=password],
+        textarea {
+            border: 1px solid #F4DBD8;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        label {
+            padding-top: 10px;
+            display: block;
+        }
+
+        .boton {
+            border: 1px solid #F4DBD8;
+            background-color: #FFF;
+            color: #2A0800;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .boton:hover{
+            background-color: #BEA8A7;
+            color: #fff;
+            border: none;
+            transition: .3s;
+        }
+
+        .cuerpo-tarjeta {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>
